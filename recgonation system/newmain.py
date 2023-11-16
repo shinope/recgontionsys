@@ -114,9 +114,11 @@ while True:
                 imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
 
                 if counter <= 10:
-                    cv2.putText(imgBackground, str(staffInfo['unit']), (1006, 550),
+                    cv2.putText(imgBackground, str(staffInfo['Unit']), (1006, 550),
                                 cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1)
-                    cv2.putText(imgBackground, str(staffInfo['Dept']), (1006, 493),
+                    cv2.putText(imgBackground, str(staffInfo['DEPT']), (1006, 493),
+                                cv2.FONT_HERSHEY_COMPLEX, 0.6, (100, 100, 100), 1)
+                    cv2.putText(imgBackground, str(staffInfo['year']), (1025, 625),
                                 cv2.FONT_HERSHEY_COMPLEX, 0.6, (100, 100, 100), 1)
 
                     (w, h), _ = cv2.getTextSize(staffInfo['name'], cv2.FONT_HERSHEY_COMPLEX, 1, 1)
