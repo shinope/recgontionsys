@@ -108,12 +108,12 @@ while True:
 
             if modeType != 3:
 
-                if 20 < counter < 40:
+                if 10 < counter < 20:
                     modeType = 2
 
                 imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
 
-                if counter <= 20:
+                if counter <= 10:
                     cv2.putText(imgBackground, str(staffInfo['unit']), (1006, 550),
                                 cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1)
                     cv2.putText(imgBackground, str(staffInfo['Dept']), (1006, 493),
@@ -128,7 +128,7 @@ while True:
 
                 counter += 1
 
-                if counter >= 40:
+                if counter >= 20:
                     counter = 0
                     modeType = 0
                     staffInfo = []
