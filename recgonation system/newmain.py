@@ -98,7 +98,7 @@ while True:
                                                    "%Y-%m-%d %H:%M:%S")
                 secondsElapsed = (datetime.now() - datetimeObject).total_seconds()
                 print(secondsElapsed)
-                if secondsElapsed > 30:
+                if secondsElapsed > 10:
                     ref = db.reference(f'staff/{id}')
                     ref.child('last_attendance_time').set(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
                 else:
